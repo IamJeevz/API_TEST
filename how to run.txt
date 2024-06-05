@@ -1,3 +1,12 @@
+Prerequest
+------------
+
+
+1. Python
+2. Pip
+3. Fast api and uvicorn(pip install fastapi uvicorn)
+
+
 uvicorn app:app --reload
 
 URL: http://127.0.0.1:8000/api/v1/resource
