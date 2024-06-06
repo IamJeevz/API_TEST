@@ -6,8 +6,15 @@ from typing import Optional
 import time
 import json
 
+# Debug logging for environment variable and logger initialization
+print(f"LOG_FILE environment variable value: {os.getenv('LOG_FILE')}")
+print(f"Logger name: {__name__}")
+
 # Configure log file path using environment variable
 log_file_path = os.getenv('LOG_FILE', 'requests.log')
+
+# Debug logging for log file path
+print(f"Using log file path: {log_file_path}")
 
 # Logging configuration
 logging.basicConfig(
@@ -16,6 +23,10 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
+
+app = FastAPI()
+
+# Your FastAPI routes and middleware here...
 
 app = FastAPI()
 
@@ -51,7 +62,7 @@ async def log_requests(request: Request, call_next):
         f"Processing time: {process_time:.4f} seconds"
     )
     logger.info(log_message)
-    
+    print(log_message)
     return response
 
 @app.get("/")

@@ -6,3 +6,9 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
+2024-06-06 14:25:06,267 - app - INFO - Username: prudent, Password: Admin
+2024-06-06 14:25:06,267 - app - INFO - POST http://127.0.0.1:8000/api/v1/resource - Query params: {} - Headers: {"user-agent": "ptpl", "content-type": "application/json", "accept": "*/*", "postman-token": "25d51ed3-857d-49d5-9f66-1feb3d950dd5", "host": "127.0.0.1:8000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "55"} - Body: {"username": "prudent", "password": "Admin"} - Status code: 200 - Processing time: 0.0023 seconds
+2024-06-06 14:25:14,420 - app - INFO - Username: prudent, Password: Admin
+2024-06-06 14:25:14,420 - app - INFO - POST http://127.0.0.1:8000/api/v1/resource - Query params: {} - Headers: {"user-agent": "ptpl", "content-type": "application/json", "accept": "*/*", "postman-token": "0399d1c7-a823-47a2-87e5-d97159fd7949", "host": "127.0.0.1:8000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "55"} - Body: {"username": "prudent", "password": "Admin"} - Status code: 200 - Processing time: 0.0020 seconds
+2024-06-06 14:26:36,103 - app - INFO - Username: prudent, Password: Admin
+2024-06-06 14:26:36,103 - app - INFO - POST http://127.0.0.1:8000/api/v1/resource - Query params: {} - Headers: {"user-agent": "ptpl", "content-type": "application/json", "accept": "*/*", "postman-token": "30e68259-4726-4d44-81a7-629edebc712c", "host": "127.0.0.1:8000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "55"} - Body: {"username": "prudent", "password": "Admin"} - Status code: 200 - Processing time: 0.0021 seconds
