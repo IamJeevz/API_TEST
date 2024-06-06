@@ -72,3 +72,5 @@ def create_resource(resource: Resource, user_agent: Optional[str] = Header(None)
         "message": "Success",
         "user_agent": user_agent
     }
+
+

@@ -6,35 +6,3 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
-2024-06-06 10:40:10,614 - app - INFO - Username: prudent, Password: Admin
-2024-06-06 10:40:10,615 - app - INFO - POST http://127.0.0.1:8000/api/v1/resource - Query params: {} - Headers: {"user-agent": "ptpl", "content-type": "application/json", "accept": "*/*", "postman-token": "e4e1d9ee-8d4d-4b73-ace6-1c996cd036a1", "host": "127.0.0.1:8000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "55"} - Body: {"username": "prudent", "password": "Admin"} - Status code: 200 - Processing time: 0.0010 seconds
-2024-06-06 10:45:04,955 - app - INFO - Username: prudent, Password: Admin
-2024-06-06 10:45:59,689 - app - INFO - Username: prudent, Password: Admin
-2024-06-06 10:46:46,654 - app - INFO - Username: prudent, Password: Admin
-2024-06-06 10:47:48,910 - app - INFO - Username: prudent, Password: Admin
-2024-06-06 10:47:50,328 - app - INFO - Username: prudent, Password: Admin
-2024-06-06 10:47:51,325 - app - INFO - Username: prudent, Password: Admin
-2024-06-06 10:50:14,317 - app - INFO - Username: prudent, Password: Admin
-2024-06-06 10:51:51,152 - app - INFO - Username: prudent, Password: Admin
-2024-06-06 10:51:51,153 - app - ERROR - Error in middleware: '_StreamingResponse' object has no attribute 'body'
-2024-06-06 10:52:00,639 - app - INFO - Username: prudent, Password: Admin
-2024-06-06 10:52:00,639 - app - ERROR - Error in middleware: '_StreamingResponse' object has no attribute 'body'
-2024-06-06 10:54:09,313 - app - INFO - Username: prudent, Password: Admin
-2024-06-06 10:54:09,314 - app - ERROR - Error in middleware: '_StreamingResponse' object has no attribute 'iter_raw'
-2024-06-06 10:55:07,238 - app - INFO - Username: prudent, Password: Admin
-2024-06-06 10:55:07,238 - app - ERROR - Error in middleware: '_StreamingResponse' object has no attribute 'streaming_body'
-2024-06-06 10:55:16,235 - app - INFO - Username: prudent, Password: Admin
-2024-06-06 10:55:16,236 - app - ERROR - Error in middleware: '_StreamingResponse' object has no attribute 'streaming_body'
-2024-06-06 10:57:44,015 - app - INFO - Username: prudent, Password: Admin
-2024-06-06 10:57:44,016 - app - INFO - POST http://127.0.0.1:8000/api/v1/resource - Query params: {} - Headers: {"user-agent": "ptpl", "content-type": "application/json", "accept": "*/*", "postman-token": "f336a83c-355d-4ca0-8a79-3fdf9b2e979e", "host": "127.0.0.1:8000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "55"} - Body: {"username": "prudent", "password": "Admin"} - Status code: 200 - Processing time: 0.0030 seconds
-2024-06-06 11:57:30,527 - app - INFO - Username: prudent, Password: Admin
-2024-06-06 12:00:02,806 - app - INFO - Username: prudent, Password: Admin
-2024-06-06 12:00:02,806 - app - INFO - POST http://127.0.0.1:8000/api/v1/resource - Query params: {} - Headers: {"user-agent": "ptpl", "content-type": "application/json", "accept": "*/*", "postman-token": "b20d5ac2-7b72-44e1-978b-4316d1663de8", "host": "127.0.0.1:8000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "55"} - Body: {"username": "prudent", "password": "Admin"} - Status code: 200 - Processing time: 0.0022 seconds
-2024-06-06 12:07:25,988 - app - INFO - Username: prudent, Password: Admin
-2024-06-06 12:09:21,285 - app - INFO - Username: prudent, Password: Admin
-2024-06-06 12:09:21,286 - app - INFO - POST http://127.0.0.1:8000/api/v1/resource - Query params: {} - Headers: {"user-agent": "ptpl", "content-type": "application/json", "accept": "*/*", "postman-token": "46576291-bc05-4db9-958a-5a18c890a7ef", "host": "127.0.0.1:8000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "55"} - Body: {"username": "prudent", "password": "Admin"} - Status code: 200 - Processing time: 0.0020 seconds
-2024-06-06 12:09:24,933 - app - INFO - POST http://127.0.0.1:8000/api/v1/resource - Query params: {} - Headers: {"user-agent": "ptpl", "content-type": "application/json", "accept": "*/*", "postman-token": "74b4d948-7661-4df7-948d-8424f0960559", "host": "127.0.0.1:8000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "57"} - Body: {"username": "prudent", "password": "Admin12"} - Status code: 400 - Processing time: 0.0010 seconds
-2024-06-06 12:09:32,859 - app - INFO - POST http://127.0.0.1:8000/api/v1/resource - Query params: {} - Headers: {"user-agent": "ptpl", "content-type": "application/json", "accept": "*/*", "postman-token": "37d5beab-e56d-4832-a4d5-1ccbe5f7dbae", "host": "127.0.0.1:8000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "57"} - Body: {"username": "prudent45", "password": "Admin"} - Status code: 400 - Processing time: 0.0010 seconds
-2024-06-06 12:09:40,719 - app - INFO - POST http://127.0.0.1:8000/api/v1/resource - Query params: {} - Headers: {"content-type": "application/json", "user-agent": "PostmanRuntime/7.39.0", "accept": "*/*", "postman-token": "0fd27c80-8158-4352-9b38-aa07acf3657b", "host": "127.0.0.1:8000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "55"} - Body: {"username": "prudent", "password": "Admin"} - Status code: 400 - Processing time: 0.0010 seconds
-2024-06-06 12:09:43,092 - app - INFO - Username: prudent, Password: Admin
-2024-06-06 12:09:43,093 - app - INFO - POST http://127.0.0.1:8000/api/v1/resource - Query params: {} - Headers: {"user-agent": "ptpl", "content-type": "application/json", "accept": "*/*", "postman-token": "d5dbcc4d-c518-49f4-aca8-77b02777aa1e", "host": "127.0.0.1:8000", "accept-encoding": "gzip, deflate, br", "connection": "keep-alive", "content-length": "55"} - Body: {"username": "prudent", "password": "Admin"} - Status code: 200 - Processing time: 0.0010 seconds
