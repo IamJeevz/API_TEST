@@ -22,7 +22,3 @@ def create_resource(resource: Resource, user_agent: Optional[str] = Header(None)
         "message": "Success",
         "user_agent": user_agent
     }
-
-if __name__ == '__main__':
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
