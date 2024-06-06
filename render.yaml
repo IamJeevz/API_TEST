@@ -1,0 +1,11 @@
+# Exported from Render on 2024-06-06T07:12:27Z
+services:
+- type: web
+  name: API_TEST
+  runtime: python
+  repo: https://github.com/IamJeevz/API_TEST
+  plan: free
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: python main.py
+version: "1"
