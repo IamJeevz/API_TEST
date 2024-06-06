@@ -1,17 +1,13 @@
-import os
-import logging
 from fastapi import FastAPI, Header, HTTPException, Request
 from pydantic import BaseModel
 from typing import Optional
+import logging
 import time
 import json
 
-# Configure log file path using environment variable
-log_file_path = os.getenv('LOG_FILE', 'requests.log')
-
 # Logging configuration
 logging.basicConfig(
-    filename=log_file_path,
+    filename='requests.log',
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
@@ -76,3 +72,5 @@ def create_resource(resource: Resource, user_agent: Optional[str] = Header(None)
         "message": "Success",
         "user_agent": user_agent
     }
+
+
