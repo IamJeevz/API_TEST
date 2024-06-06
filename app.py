@@ -9,6 +9,10 @@ class Resource(BaseModel):
 
 REQUIRED_USER_AGENT = "jeevan"
 
+@app.get("/")
+def read_root():
+    return {"message": "Hello World"}
+
 @app.post("/api/v1/resource")
 def create_resource(resource: Resource, user_agent: Optional[str] = Header(None)):
     if user_agent != REQUIRED_USER_AGENT:
