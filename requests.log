@@ -1,0 +1,11 @@
+import logging
+
+logging.basicConfig(
+    filename='requests.log',
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+2024-06-06 10:13:26,526 - app - INFO - POST http://127.0.0.1:8000/api/v1/resource - Query params: {} - Body: {"name": "Temp"} - Status code: 400 - Processing time: 0.0095 seconds
+2024-06-06 10:13:36,775 - app - INFO - POST http://127.0.0.1:8000/api/v1/resource - Query params: {} - Body: {"name": "Temp"} - Status code: 200 - Processing time: 0.0010 seconds
+2024-06-06 10:14:40,550 - app - INFO - POST http://127.0.0.1:8000/api/v1/resource - Query params: {} - Body: {"name": "Temp", "name2": "Jeevz"} - Status code: 200 - Processing time: 0.0010 seconds
