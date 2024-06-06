@@ -6,15 +6,9 @@ from typing import Optional
 import time
 import json
 
-# Debug logging for environment variable and logger initialization
-print(f"LOG_FILE environment variable value: {os.getenv('LOG_FILE')}")
-print(f"Logger name: {__name__}")
-
 # Configure log file path using environment variable
 log_file_path = os.getenv('LOG_FILE', 'requests.log')
 
-# Debug logging for log file path
-print(f"Using log file path: {log_file_path}")
 
 # Logging configuration
 logging.basicConfig(
@@ -62,7 +56,7 @@ async def log_requests(request: Request, call_next):
         f"Processing time: {process_time:.4f} seconds"
     )
     logger.info(log_message)
-    print(log_message)
+    print("\n" + log_message + "\n")
     return response
 
 @app.get("/")
@@ -70,20 +64,10 @@ def read_root():
     return {"message": "Hello, Welcome to Prudent"}
 
 @app.post("/api/v1/resource")
-def create_resource(resource: Resource, user_agent: Optional[str] = Header(None)):
-    if user_agent != REQUIRED_USER_AGENT:
-        raise HTTPException(status_code=400, detail="Invalid User-Agent header")
-        
-    if resource.username != REQ_USERNAME:
-        raise HTTPException(status_code=400, detail="Invalid username")
-        
-    if resource.password != REQ_PASSWORD:
-        raise HTTPException(status_code=400, detail="Invalid password")
-
-    # Log username and password
-    logger.info(f"Username: {resource.username}, Password: {resource.password}")
-
+def create_resource(resource: Resource, head: Optional[str] = Header(None)):
     return {
         "message": "Success",
-        "user_agent": user_agent
+        "header": head,
+        "username" : resource.username,
+        "password" : resource.password
     }
