@@ -1,6 +1,7 @@
 import os
 import logging
 from fastapi import FastAPI, Header, HTTPException, Request
+from fastapi.responses import PlainTextResponse
 from pydantic import BaseModel
 from typing import Optional
 import time
@@ -71,3 +72,12 @@ def create_resource(resource: Resource, head: Optional[str] = Header(None)):
         "username" : resource.username,
         "password" : resource.password
     }
+
+
+@app.post("/plainText", response_class=PlainTextResponse)
+async def plain_text(req: Request):
+    try:
+        body = await req.body()
+        return PlainTextResponse(content=body, status_code=200)
+    except Exception as err:
+        raise HTTPException(status_code=400, detail={"status": 0, "message": str(err)})
