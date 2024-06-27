@@ -15,26 +15,24 @@ words = [
 used_words = set()
 used_numbers = set()
 
-@app.get("/random_word")
-def get_random_word() -> str:
+@app.get("/random_data")
+def get_random_data():
     # Shuffle words if all are used
     if len(used_words) == len(words):
         used_words.clear()
     
     # Get a random word that hasn't been used
     while True:
-        word = random.choice(words)
-        if word not in used_words:
-            used_words.add(word)
+        random_word = random.choice(words)
+        if random_word not in used_words:
+            used_words.add(random_word)
             break
     
-    return word
-
-@app.get("/random_number")
-def get_random_number():
+    # Generate a unique random number
     while True:
         random_number = random.randint(1000000000, 9999999999)
         if random_number not in used_numbers:
             used_numbers.add(random_number)
             break
-    return random_number
+    
+    return {"word": random_word, "number": random_number}
