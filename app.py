@@ -35,4 +35,7 @@ def get_random_data():
             used_numbers.add(random_number)
             break
     
+        # Print to console
+    print(f">>>>> Word: {random_word},     Number: {random_number}")
+    
     return {"word": random_word, "number": random_number}
