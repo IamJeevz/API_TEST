@@ -14,8 +14,10 @@ async def get_random_boolean():
     result = random.choice([True, False])
     
     # Log the result to the console
-    logging.info(f"Random Boolean Result: {result}")
+    logging.info(f">>>>>>>>>Random Boolean Result: {result}")
     
     # Return the result
     return {"result": result}
+
+
 
