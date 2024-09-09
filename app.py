@@ -38,4 +38,4 @@ def get_random_data():
         # Print to console
     print(f">>>>> Word: {random_word},     Number: {random_number}")
     
-    return {"word": random_word, "number": random_number}
+    return {"word": random_word, "number": str(random_number)}
