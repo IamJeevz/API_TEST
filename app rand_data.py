@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from pydantic import BaseModel
+from typing import List
 import random
 
 app = FastAPI()
@@ -15,11 +15,7 @@ words = [
 used_words = set()
 used_numbers = set()
 
-class RandomDataResponse(BaseModel):
-    word: str
-    number: str  # Ensuring that 'number' is returned as a string
-
-@app.get("/random_data", response_model=RandomDataResponse)
+@app.get("/random_data")
 def get_random_data():
     # Shuffle words if all are used
     if len(used_words) == len(words):
@@ -39,8 +35,7 @@ def get_random_data():
             used_numbers.add(random_number)
             break
     
-    # Print to console
+        # Print to console
     print(f">>>>> Word: {random_word},     Number: {random_number}")
     
-    # Return the response with the number as a string
-    return {"word": random_word, "number": str(random_number)}
+    return {"word": random_word, "number": random_number}
