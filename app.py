@@ -1,8 +1,12 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 import random
+from fastapi.responses import JSONResponse
 
 app = FastAPI()
+
+
+
 
 # Example dictionary of words
 words = [
@@ -44,3 +48,10 @@ def get_random_data():
     
     # Return the response with the number as a string
     return {"word": random_word, "number": str(random_number)}
+
+# Create a GET endpoint that accepts URL-encoded query parameters
+@app.get("/urlencoded/")
+async def handle_query_params(name: str, age: int):
+    # You can access the query parameters directly in the function
+    response_data = {"name": name, "age": age}
+    return JSONResponse(content=response_data)
